@@ -4,8 +4,8 @@
 open System
 
 // Функция для нахождения первой цифры числа
-let firstDigit n =
-    let rec loop x = 
+let firstDigit (n : int) : int =
+    let rec loop (x : int) : int = 
         if x < 10 then
             x
         else 
@@ -13,7 +13,7 @@ let firstDigit n =
     loop (abs n)
 
 // Фунция ввода списка
-let inputList n = 
+let inputList (n : int) : int list = 
     [
     for i in 1..n do
         printf "Введите число: "
@@ -34,4 +34,5 @@ let main args =
         let digit = int(Console.ReadLine())
         let result = List.fold (fun sum x -> if firstDigit x = digit then sum + x else sum) 0 numbers
         printfn "Сумма элементов, начинающихся на %d = %d" digit result
+
     0
