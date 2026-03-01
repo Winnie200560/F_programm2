@@ -5,14 +5,14 @@
 open System
 
 // Функция для вычисления суммы цифр числа
-let rec SummDigit n =
+let rec SummDigit (n : int) : int =
     if n = 0 then
         0
     else
         (n % 10) + SummDigit (n / 10)
 
 // Функция для формирования списка из чисел введных с клавиатуры
-let ListDigit n = 
+let ListDigit (n : int) : int list = 
     [
     for i in 1..n do
         printf "Введите число %d: " i
@@ -37,5 +37,6 @@ let main args =
         let result = List.map SummDigit numbers
 
         printfn "Список сумм цифр: %A" result
+
 
     0
