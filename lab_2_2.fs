@@ -38,9 +38,10 @@ let main args =
                         sum + x 
                     else 
                         sum) 
-            0 numbers
-printfn "Сумма элементов, начинающихся на %d = %d" digit result
+                0 numbers
+        printfn "Сумма элементов, начинающихся на %d = %d" digit result
 
     0
+
 
 
