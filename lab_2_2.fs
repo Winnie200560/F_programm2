@@ -31,8 +31,16 @@ let main args =
 
         printfn "Введите цифру (0-9): "
         let digit = int(Console.ReadLine())
-        let result = List.fold (fun sum x -> if firstDigit x = digit then sum + x else sum) 0 numbers
-        printfn "Сумма элементов, начинающихся на %d = %d" digit result
+        let result = 
+            List.fold 
+                (fun sum x -> 
+                    if firstDigit x = digit then 
+                        sum + x 
+                    else 
+                        sum) 
+            0 numbers
+printfn "Сумма элементов, начинающихся на %d = %d" digit result
 
     0
+
 
