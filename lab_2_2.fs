@@ -4,13 +4,12 @@
 open System
 
 // Функция для нахождения первой цифры числа
-let firstDigit (n : int) : int =
-    let rec loop (x : int) : int = 
-        if x < 10 then
-            x
-        else 
-            loop (x / 10)
-    loop (abs n)
+let rec firstDigit (n : int) : int =
+    let x = abs n
+    if x < 10 then
+        x
+    else 
+        firstDigit (x / 10)
 
 // Фунция ввода списка
 let inputList (n : int) : int list = 
@@ -36,3 +35,4 @@ let main args =
         printfn "Сумма элементов, начинающихся на %d = %d" digit result
 
     0
+
